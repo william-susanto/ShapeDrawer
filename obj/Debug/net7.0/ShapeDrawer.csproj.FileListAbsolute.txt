@@ -1,0 +1,15 @@
+/Users/williamsusanto/Documents/00 - Portfolio/2.3P/ShapeDrawer/bin/Debug/net7.0/ShapeDrawer
+/Users/williamsusanto/Documents/00 - Portfolio/2.3P/ShapeDrawer/bin/Debug/net7.0/ShapeDrawer.deps.json
+/Users/williamsusanto/Documents/00 - Portfolio/2.3P/ShapeDrawer/bin/Debug/net7.0/ShapeDrawer.runtimeconfig.json
+/Users/williamsusanto/Documents/00 - Portfolio/2.3P/ShapeDrawer/bin/Debug/net7.0/ShapeDrawer.dll
+/Users/williamsusanto/Documents/00 - Portfolio/2.3P/ShapeDrawer/bin/Debug/net7.0/ShapeDrawer.pdb
+/Users/williamsusanto/Documents/00 - Portfolio/2.3P/ShapeDrawer/obj/Debug/net7.0/ShapeDrawer.csproj.AssemblyReference.cache
+/Users/williamsusanto/Documents/00 - Portfolio/2.3P/ShapeDrawer/obj/Debug/net7.0/ShapeDrawer.GeneratedMSBuildEditorConfig.editorconfig
+/Users/williamsusanto/Documents/00 - Portfolio/2.3P/ShapeDrawer/obj/Debug/net7.0/ShapeDrawer.AssemblyInfoInputs.cache
+/Users/williamsusanto/Documents/00 - Portfolio/2.3P/ShapeDrawer/obj/Debug/net7.0/ShapeDrawer.AssemblyInfo.cs
+/Users/williamsusanto/Documents/00 - Portfolio/2.3P/ShapeDrawer/obj/Debug/net7.0/ShapeDrawer.csproj.CoreCompileInputs.cache
+/Users/williamsusanto/Documents/00 - Portfolio/2.3P/ShapeDrawer/obj/Debug/net7.0/ShapeDrawer.dll
+/Users/williamsusanto/Documents/00 - Portfolio/2.3P/ShapeDrawer/obj/Debug/net7.0/refint/ShapeDrawer.dll
+/Users/williamsusanto/Documents/00 - Portfolio/2.3P/ShapeDrawer/obj/Debug/net7.0/ShapeDrawer.pdb
+/Users/williamsusanto/Documents/00 - Portfolio/2.3P/ShapeDrawer/obj/Debug/net7.0/ShapeDrawer.genruntimeconfig.cache
+/Users/williamsusanto/Documents/00 - Portfolio/2.3P/ShapeDrawer/obj/Debug/net7.0/ref/ShapeDrawer.dll
