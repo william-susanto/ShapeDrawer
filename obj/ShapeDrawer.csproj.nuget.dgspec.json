@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/williamsusanto/Documents/00 - Portfolio/2.3P/ShapeDrawer/ShapeDrawer.csproj": {}
+    "/Users/williamsusanto/Documents/GitHub/ShapeDrawer/ShapeDrawer.csproj": {}
   },
   "projects": {
-    "/Users/williamsusanto/Documents/00 - Portfolio/2.3P/ShapeDrawer/ShapeDrawer.csproj": {
+    "/Users/williamsusanto/Documents/GitHub/ShapeDrawer/ShapeDrawer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/williamsusanto/Documents/00 - Portfolio/2.3P/ShapeDrawer/ShapeDrawer.csproj",
+        "projectUniqueName": "/Users/williamsusanto/Documents/GitHub/ShapeDrawer/ShapeDrawer.csproj",
         "projectName": "ShapeDrawer",
-        "projectPath": "/Users/williamsusanto/Documents/00 - Portfolio/2.3P/ShapeDrawer/ShapeDrawer.csproj",
+        "projectPath": "/Users/williamsusanto/Documents/GitHub/ShapeDrawer/ShapeDrawer.csproj",
         "packagesPath": "/Users/williamsusanto/.nuget/packages/",
-        "outputPath": "/Users/williamsusanto/Documents/00 - Portfolio/2.3P/ShapeDrawer/obj/",
+        "outputPath": "/Users/williamsusanto/Documents/GitHub/ShapeDrawer/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/williamsusanto/.nuget/NuGet/NuGet.Config"
