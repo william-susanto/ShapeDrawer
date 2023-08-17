@@ -18,7 +18,7 @@ namespace ShapeDrawer
             _x = 0.0F;
             _y = 0.0F;
             _width = 100;
-			_height = -100;
+			_height = 100;
 		}
 
 		public void Draw()
