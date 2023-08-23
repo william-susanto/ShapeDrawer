@@ -8,8 +8,7 @@ namespace ShapeDrawer
         public static void Main()
         {
             Window window = new Window("Shape Drawer", 800, 600);
-            Shape myShape = new Shape();
-
+            Drawing drawing = new Drawing();
             do
             {
 
@@ -18,16 +17,33 @@ namespace ShapeDrawer
 
                 if (SplashKit.MouseClicked(MouseButton.LeftButton))
                 {
-                    myShape.X = SplashKit.MouseX();
-                    myShape.Y = SplashKit.MouseY();
+                    Shape s = new Shape();
+                    s.X = SplashKit.MouseX();
+                    s.Y = SplashKit.MouseY();
+
+                    drawing.AddShape(s);
                 }
 
-                if (SplashKit.KeyTyped(KeyCode.SpaceKey) && myShape.IsAt(SplashKit.MousePosition()))
+                if (SplashKit.MouseClicked(MouseButton.RightButton))
+                { 
+                    drawing.SelectShapesAt(SplashKit.MousePosition());
+                }
+
+                if (SplashKit.KeyTyped(KeyCode.SpaceKey))
                 {
-                    myShape.Color = SplashKit.RandomRGBColor(255);
+                    drawing.Background = SplashKit.RandomRGBColor(255);
                 }
 
-                myShape.Draw();
+                if (SplashKit.KeyTyped(KeyCode.DeleteKey) || SplashKit.KeyTyped(KeyCode.BackspaceKey))
+                {
+                    foreach (Shape s in drawing.SelectedShapes)
+                    {
+                        drawing.RemoveShape(s);
+                    }
+
+                }
+
+                drawing.Draw();
 
                 SplashKit.RefreshScreen();
 
