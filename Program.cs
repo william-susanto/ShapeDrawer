@@ -17,11 +17,11 @@ namespace ShapeDrawer
 
                 if (SplashKit.MouseClicked(MouseButton.LeftButton))
                 {
-                    Shape s = new Shape();
-                    s.X = SplashKit.MouseX();
-                    s.Y = SplashKit.MouseY();
+                    MyRectangle newRect = new MyRectangle();
+                    newRect.X = SplashKit.MouseX();
+                    newRect.Y = SplashKit.MouseY();
 
-                    drawing.AddShape(s);
+                    drawing.AddShape(newRect);
                 }
 
                 if (SplashKit.MouseClicked(MouseButton.RightButton))
