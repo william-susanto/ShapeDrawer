@@ -3,92 +3,62 @@ using SplashKitSDK;
 
 namespace ShapeDrawer
 {
-    public class Shape
+    public abstract class Shape
     {
-        private int _width;
-        private int _height;
+        float _x, _y;
         private bool _selected;
+        Color _color;
 
-        public Shape()
+        public Shape() : this(Color.Yellow)
+        { }
+
+        public Shape(Color c)
         {
-            Color = Color.Green;
-            X = 0.0F;
-            Y = 0.0F;
-            _width = 100;
-            _height = 100;
+            _color = c;
         }
 
-        public void Draw()
-        {
-            if (_selected)
-            {
-                DrawOutline();
-            }
+        public abstract void Draw();
 
-            SplashKit.FillRectangle(Color, X, Y, _width, _height);
+        public abstract void DrawOutline();
+
+        public abstract bool IsAt(Point2D pt);
+
+        public virtual void SaveTo(StreamWriter writer)
+        {
+            writer.WriteColor(_color);
+            writer.WriteLine(_x);
+            writer.WriteLine(_y);
         }
 
-        public bool IsAt(Point2D pt)
+        public virtual void LoadFrom(StreamReader reader)
         {
-            if (pt.X <= (_width + X) && pt.X > X && pt.Y <= (_height + Y) && pt.Y > Y)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            _color = reader.ReadColor();
+            _x = reader.ReadInteger();
+            _y = reader.ReadInteger();
         }
 
-        public void DrawOutline()
+        public float X
         {
-            float outlineX = X - 2;
-            float outlineY = Y - 2;
-            int outlineWidth = _width + 4;
-            int outlineHeight = _height + 4;
-
-            SplashKit.FillRectangle(Color.Black, outlineX, outlineY, outlineWidth, outlineHeight);
+            get => _x;
+            set => _x = value;
         }
 
-        public Color Color { get; set; }
-
-        public float X { get; set; }
-
-        public float Y { get; set; }
-
-        public int Width
+        public float Y
         {
-            get
-            {
-                return _width;
-            }
-            set
-            {
-                _width = value;
-            }
+            get => _y;
+            set => _y = value;
         }
-        public int Height
+
+        public Color Clr
         {
-            get
-            {
-                return _height;
-            }
-            set
-            {
-                _height = value;
-            }
+            get => _color;
+            set => _color = value;
         }
 
         public bool Selected
         {
-            get
-            {
-                return _selected;
-            }
-            set
-            {
-                _selected = value;
-            }
+            get => _selected;
+            set => _selected = value;
         }
     }
 }

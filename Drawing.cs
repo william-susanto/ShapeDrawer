@@ -2,6 +2,7 @@ using System.Runtime.InteropServices;
 
 namespace ShapeDrawer;
 using System.Collections.Generic;
+using System.IO;
 using SplashKitSDK;
 
 public class Drawing
@@ -16,9 +17,7 @@ public class Drawing
     }
 
     public Drawing() : this(Color.White)
-    {
-        _shapes = new List<Shape>();
-    }
+    { }
 
     public void SelectShapesAt(Point2D pt)
     {
@@ -31,7 +30,6 @@ public class Drawing
     public void Draw()
     {
         SplashKit.ClearScreen(_background);
-        Console.WriteLine(_background.GetHashCode());
 
         foreach (Shape s in _shapes)
         {
@@ -47,6 +45,68 @@ public class Drawing
     public void RemoveShape(Shape s)
     {
         _shapes.Remove(s);
+    }
+
+    public void Save(string fp)
+    {
+        StreamWriter writer = new StreamWriter(fp);
+
+        try
+        {
+            writer.WriteColor(_background);
+            writer.WriteLine(ShapeCount);
+
+            foreach (Shape s in _shapes)
+            {
+                s.SaveTo(writer);
+            }
+        }
+        finally
+        {
+            writer.Close();
+        }
+    }
+
+    public void Load(string fp)
+    {
+        StreamReader reader = new StreamReader(fp);
+
+        try
+        {
+
+
+            Shape s;
+            _background = reader.ReadColor();
+            int count = reader.ReadInteger();
+
+            for (int i = 0; i < count; i++)
+            {
+                string kind = reader.ReadLine();
+
+                switch (kind)
+                {
+                    case "Rectangle":
+                        s = new MyRectangle();
+                        break;
+
+                    case "Circle":
+                        s = new MyCircle();
+                        break;
+                    case "Line":
+                        s = new MyLine();
+                        break;
+                    default:
+                        throw new InvalidCastException("Unknown shape kind: " + kind);
+                }
+
+                s.LoadFrom(reader);
+                _shapes.Add(s);
+            }
+        }
+        finally
+        {
+            reader.Close();
+        }
     }
 
     public int ShapeCount
